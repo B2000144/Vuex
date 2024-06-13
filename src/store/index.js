@@ -17,6 +17,11 @@ const storeData = {
     },
     // doneTodos: state => state.todos.filter((todo) => todo.completed); cach 2
   },
+  mutations: {
+    TOGGLE_AUTH(state) {
+      state.auth.isAuthenticated = !state.auth.isAuthenticated;
+    },
+  },
 };
 
 const store = createStore(storeData);
