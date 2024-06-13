@@ -10,13 +10,10 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "StatusBar",
-  computed: {
-    doneTodos() {
-      return this.$store.getters.doneTodos;
-    },
-  },
+  computed: mapGetters(["doneTodos"]),
 };
 </script>
 
