@@ -11,6 +11,12 @@ const storeData = {
       isAuthenticated: true,
     },
   },
+  getters: {
+    doneTodos(state) {
+      return state.todos.filter((todo) => todo.completed);
+    },
+    // doneTodos: state => state.todos.filter((todo) => todo.completed); cach 2
+  },
 };
 
 const store = createStore(storeData);

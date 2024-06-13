@@ -14,7 +14,7 @@ export default {
   name: "StatusBar",
   computed: {
     doneTodos() {
-      return this.$store.state.todos.filter((todo) => todo.completed);
+      return this.$store.getters.doneTodos;
     },
   },
 };
